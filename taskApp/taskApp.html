@@ -26,7 +26,17 @@
                 <div class="card mt-3">
                     <div class="card-header d-flex justify-content-between">
                         <div>
-                            <button class="btn btn-primary filter-btn" data-filter="all">Hepsi</button>
+                            <style>
+                                @media (max-width:500px) {
+                                    .filter-btn {
+                                        padding: .26rem .45rem;
+                                    }
+                                    #clearButton {
+                                        padding: .26rem .45rem;
+                                    }
+                                };
+                            </style>
+                            <button class="btn btn-primary  filter-btn" data-filter="all">Hepsi</button>
                             <button class="btn btn-outline-primary filter-btn" data-filter="pending">Yapılacaklar</button>
                             <button class="btn btn-outline-primary filter-btn" data-filter="completed">Yapılanlar</button>
                         </div>
