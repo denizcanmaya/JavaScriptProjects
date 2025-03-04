@@ -1,3 +1,5 @@
+
+
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
@@ -11,7 +13,7 @@ function validateEmail(input) {
     if (re.test(input.value.trim())) {
         success(input);
     } else {
-        error(input, 'Geçersiz email adresi! (Sadece Latin harfleri ve standart karakterler kullanılabilir)');
+        error(input, 'Invalid email address! (Only Latin letters and standard characters can be used)');
     }
 }
 
@@ -49,9 +51,9 @@ form.addEventListener('submit', function(event) {
 
 function checkLength(input, min, max) {
     if (input.value.length < min) {
-        error(input, `${input.id} en az ${min} karakter olmalıdır.`)
+        error(input, `${input.id} must be at least ${min} characters.`)
     } else if (input.value.length > max) {
-        error(input, `${input.id} en fazla ${max} karakter olmalıdır.`)
+        error(input, `${input.id} must be up to ${max} characters.`)
     } else {
         success(input);
     }
@@ -60,8 +62,8 @@ function checkLength(input, min, max) {
 
 function checkPassword(input1,input2) {
     if (input1.value !== input2.value) {
-        error(input2, `Parolalar birbiri ile eşleşmiyor!`)
+        error(input2, `Passwords don't match!`)
     } else if (input2.value == '') {
-        error(input2, `${input2.id} girmediniz!`)
+        error(input2, `${input2.id} you didn't enter!`)
     }
 }
